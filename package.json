@@ -1,14 +1,22 @@
 {
   "name": "khai-node-js-course",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node src/index.js",
+    "migration:generate": "drizzle-kit generate:pg",
+    "migration:push": "drizzle-kit push:pg"
   },
   "author": "taras khalaim",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "drizzle-orm": "^0.30.1",
+    "express": "^4.21.1",
+    "pg": "^8.14.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.14"
   }
 }
